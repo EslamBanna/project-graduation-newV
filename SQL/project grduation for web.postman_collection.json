@@ -94,7 +94,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"phone\": \"0147852369\",\r\n    \"password\": \"ddddd\"\r\n}",
+							"raw": "{\r\n    \"phone\": \"019\",\r\n    \"password\": \"test\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -102,11 +102,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/login",
+							"raw": "https://project-graduation.000webhostapp.com/api/login",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"project-graduation",
+								"000webhostapp",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"login"
@@ -168,7 +170,8 @@
 								{
 									"key": "email",
 									"value": "abdulla@gmail.com",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "password",
@@ -178,7 +181,8 @@
 								{
 									"key": "phone",
 									"value": "0147852369",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "date_of_birth",
@@ -187,7 +191,7 @@
 								},
 								{
 									"key": "id_number",
-									"value": "3000",
+									"value": "300022",
 									"type": "text"
 								},
 								{
@@ -208,7 +212,7 @@
 								{
 									"key": "photo",
 									"type": "file",
-									"src": "/F:/web/images/1.png"
+									"src": "/F:/a.jpg"
 								},
 								{
 									"key": "main_address",
@@ -217,17 +221,19 @@
 								},
 								{
 									"key": "user_id",
-									"value": "2",
+									"value": "12",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/web/update-user-info",
+							"raw": "https://project-graduation.000webhostapp.com/api/web/update-user-info",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"project-graduation",
+								"000webhostapp",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"web",
@@ -601,7 +607,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"personal\": 1,\r\n    \"user_id\": 2\r\n}",
+									"raw": "{\r\n    \"personal\": 0,\r\n    \"user_id\": 12\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2969,6 +2975,168 @@
 								"web",
 								"needer",
 								"delete-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_type\": \"عام\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/web/needer/filter-posts",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"web",
+								"needer",
+								"filter-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter my posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 12,\r\n    \"post_type\": \"عام\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/web/needer/filter-my-posts",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"web",
+								"needer",
+								"filter-my-posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "make comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY1MTAwNjIwOSwibmJmIjoxNjUxMDA2MjA5LCJqdGkiOiJmMENMdXhmVWpTaHI0WlhrIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bd2KDa2OS6iFy6e4pdupf6SrhR4IVoRf8hoceyaQiOk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "post_type",
+									"value": "طلب وظيفة",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "اتطيع مساعدتك من خلال الانضمام للعمل في شركتي",
+									"type": "text"
+								},
+								{
+									"key": "attach",
+									"type": "file",
+									"src": "/F:/30.jpg"
+								},
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/web/needer/make-comment",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"web",
+								"needer",
+								"make-comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY1MTAwNjIwOSwibmJmIjoxNjUxMDA2MjA5LCJqdGkiOiJmMENMdXhmVWpTaHI0WlhrIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bd2KDa2OS6iFy6e4pdupf6SrhR4IVoRf8hoceyaQiOk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": 1,\r\n    \"post_type\": \"طلب وظيفة\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/web/needer/get-comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"web",
+								"needer",
+								"get-comments"
 							]
 						}
 					},

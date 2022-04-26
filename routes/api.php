@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Helper\FinancialProvideController;
 use App\Http\Controllers\Helper\FoundController;
@@ -90,6 +91,9 @@ Route::group(['middleware' => 'CheckAuth:api-user'], function () {
         Route::post('/delete-post',[PostController::class,'deletePost']);
         Route::post('/filter-posts',[PostController::class,'filterPosts']);
         Route::post('/filter-my-posts',[PostController::class,'filterMyPosts']);
+
+        Route::post('/make-comment',[CommentController::class,'makeComment']);
+        Route::post('/get-comments',[CommentController::class,'getComment']);
 
     });
 
@@ -189,6 +193,10 @@ Route::group(['prefix' => 'web'], function () {
         Route::post('/delete-post',[PostController::class,'deletePost']);
         Route::post('/filter-posts',[PostController::class,'filterPosts']);
         Route::post('/filter-my-posts',[PostController::class,'filterMyPosts']);
+
+        Route::post('/make-comment',[CommentController::class,'makeComment']);
+        Route::post('/get-comments',[CommentController::class,'getComment']);
+
     });
 
     Route::group(['prefix' => 'helper'], function () {

@@ -74,13 +74,11 @@
 							]
 						},
 						"url": {
-							"raw": "https://project-graduation.000webhostapp.com/api/sign-up",
-							"protocol": "https",
+							"raw": "localhost:8000/api/sign-up",
 							"host": [
-								"project-graduation",
-								"000webhostapp",
-								"com"
+								"localhost"
 							],
+							"port": "8000",
 							"path": [
 								"api",
 								"sign-up"
@@ -96,7 +94,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"phone\": \"0199\",\r\n    \"password\": \"test2\"\r\n}",
+							"raw": "{\r\n    \"phone\": \"015443\",\r\n    \"password\": \"test2\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -104,13 +102,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://project-graduation.000webhostapp.com/api/login",
-							"protocol": "https",
+							"raw": "localhost:8000/api/login",
 							"host": [
-								"project-graduation",
-								"000webhostapp",
-								"com"
+								"localhost"
 							],
+							"port": "8000",
 							"path": [
 								"api",
 								"login"
@@ -3107,6 +3103,97 @@
 								"api",
 								"needer",
 								"delete-post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "make comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY1MTAwNjIwOSwibmJmIjoxNjUxMDA2MjA5LCJqdGkiOiJmMENMdXhmVWpTaHI0WlhrIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bd2KDa2OS6iFy6e4pdupf6SrhR4IVoRf8hoceyaQiOk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "post_type",
+									"value": "طلب وظيفة",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "اتطيع مساعدتك من خلال الانضمام للعمل في شركتي",
+									"type": "text"
+								},
+								{
+									"key": "attach",
+									"type": "file",
+									"src": "/F:/30.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/needer/make-comment",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"needer",
+								"make-comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY1MTAwNjIwOSwibmJmIjoxNjUxMDA2MjA5LCJqdGkiOiJmMENMdXhmVWpTaHI0WlhrIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.bd2KDa2OS6iFy6e4pdupf6SrhR4IVoRf8hoceyaQiOk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": 1,\r\n    \"post_type\": \"طلب وظيفة\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/needer/get-comments",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"needer",
+								"get-comments"
 							]
 						}
 					},
