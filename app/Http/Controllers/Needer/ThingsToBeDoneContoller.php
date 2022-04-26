@@ -62,7 +62,7 @@ class ThingsToBeDoneContoller extends Controller
             }
             ToBeApply::create([
                 'user_id' => Auth()->user()->id ?? $request->user_id,
-                'type' => 'need',
+                'type' => 'help',
                 'post_id' => $request->post_id
             ]);
             return $this->returnSuccessMessage('inserted suuccessfully');

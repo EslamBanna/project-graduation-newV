@@ -146,7 +146,10 @@ class NeedJobContoller extends Controller
             if (!$request_job) {
                 return $this->returnError(203, 'this need job post is not exist');
             }
-            $provide_jobs = ProvideJop::with('user:id,name,phone,main_address')
+            $provide_jobs = ProvideJop::whereDoesntHave('applyers', function ($q) use ($request) {
+                $q->where('user_id', Auth()->user()->id ?? $request->user_id);
+            })
+            ->with('user:id,name,phone,main_address')
                 ->where('required_qualification', 'like', '%' . $request_job['qualification'] . '%')
                 ->where('required_skills', 'like', '%' . $request_job['skills'] . '%')
                 ->where('required_certificates', 'like', '%' . $request_job['certificates'] . '%')

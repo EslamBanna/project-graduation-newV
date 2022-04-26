@@ -132,7 +132,9 @@ class FinancialHelpController extends Controller
             }
             $applyers = FinancialApply::with(['helper' => function ($q) {
                 $q->select('id', 'name', 'phone');
-            }])->where('financial_post_id', $request->post_id)
+            }])
+            ->where('financial_post_id', $request->post_id)
+            ->where('status',0)
                 ->latest()
                 ->get();
             return $this->returnData('data', $applyers);

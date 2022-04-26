@@ -32,6 +32,7 @@ class SupportThindToBeDoneController extends Controller
             $things_to_be_done = ThingsToBeDone::whereDoesntHave('supportApllyers', function ($q) use ($request) {
                 $q->where('user_id', Auth()->user()->id ?? $request->user_id);
             })
+            ->where('user_id', '!=', Auth()->user()->id ?? $request->user_id)
                 ->with(['needer' => function ($q) {
                     $q->select('id', 'name', 'phone');
                 }])
@@ -51,7 +52,7 @@ class SupportThindToBeDoneController extends Controller
             }
             ToBeApply::create([
                 'user_id' => Auth()->user()->id ?? $request->user_id,
-                'type' => 'help',
+                'type' => 'need',
                 'post_id' => $request->post_id
             ]);
             return $this->returnSuccessMessage('inserted suuccessfully');
@@ -182,7 +183,9 @@ class SupportThindToBeDoneController extends Controller
             if (!$suport_thing) {
                 return $this->returnError(203, 'this post is not exist');
             }
-            $things_to_be_posts = ThingsToBeDone::with('needer:id,name,phone,main_address')
+            $things_to_be_posts = ThingsToBeDone::whereDoesntHave('supportApllyers', function ($q) use ($request) {
+                $q->where('user_id', Auth()->user()->id ?? $request->user_id);
+            })->with('needer:id,name,phone,main_address')
                 ->where('from_place', 'like', '%' . $suport_thing['from_place'] . '%')
                 ->where('to_place', 'like', '%' . $suport_thing['to_place'] . '%')
                 ->where('from_date', '<=', $suport_thing['date'])

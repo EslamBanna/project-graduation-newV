@@ -20,27 +20,37 @@ class FinancialProvideController extends Controller
             $_all_financial_need = null;
             if ($request->has('type_of_help')) {
                 if ($request->has('provide_help_way')) {
-                    $_all_financial_need = FinancialHelp::where('status', 0)
+                    $_all_financial_need = FinancialHelp::whereDoesntHave('applyers', function ($q) use ($request) {
+                        $q->where('helper_id', Auth()->user()->id ?? $request->user_id);
+                    })
+                    ->where('status', 0)
                         ->where('type_of_help', $request->type_of_help)
                         ->where('provide_help_way', $request->provide_help_way)
                         ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
                         ->latest()
                         ->get();
                 } else {
-                    $_all_financial_need = FinancialHelp::where('status', 0)
+                    $_all_financial_need = FinancialHelp::whereDoesntHave('applyers', function ($q) use ($request) {
+                        $q->where('helper_id', Auth()->user()->id ?? $request->user_id);
+                    })
+                    ->where('status', 0)
                         ->where('type_of_help', $request->type_of_help)
                         ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
                         ->latest()
                         ->get();
                 }
             } elseif ($request->has('provide_help_way')) {
-                $_all_financial_need = FinancialHelp::where('status', 0)
+                $_all_financial_need = FinancialHelp::whereDoesntHave('applyers', function ($q) use ($request) {
+                    $q->where('helper_id', Auth()->user()->id ?? $request->user_id);
+                })->where('status', 0)
                     ->where('provide_help_way', $request->provide_help_way)
                     ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
                     ->latest()
                     ->get();
             } else {
-                $_all_financial_need = FinancialHelp::where('status', 0)
+                $_all_financial_need = FinancialHelp::whereDoesntHave('applyers', function ($q) use ($request) {
+                    $q->where('helper_id', Auth()->user()->id ?? $request->user_id);
+                })->where('status', 0)
                     ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
                     ->latest()
                     ->get();
