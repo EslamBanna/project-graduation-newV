@@ -1,0 +1,3148 @@
+{
+	"info": {
+		"_postman_id": "5da2b21f-98ce-408a-b74c-d1c625bbedc9",
+		"name": "project grduation for mobile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lll2@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test2",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "015443",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2022-03-25 22:59:29",
+									"type": "text"
+								},
+								{
+									"key": "id_number",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id_photo",
+									"type": "file",
+									"src": "/F:/a.jpg"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/F:/a.jpg"
+								},
+								{
+									"key": "main_address",
+									"value": "tantatest2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/sign-up",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"0199\",\r\n    \"password\": \"test2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/login",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/user",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjQ3MDI0NDA5LCJuYmYiOjE2NDcwMjQ0MDksImp0aSI6Im5FUzFNYmF5MkJqQXh3c0siLCJzdWIiOjcsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.ELc79yindsNkBjQDqOxWvhtQf1NBZS3HucmWTNtlqHQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "test updated",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "abdulla@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0147852369",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2000-01-25",
+									"type": "text"
+								},
+								{
+									"key": "id_number",
+									"value": "3000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "job",
+									"value": "software engineer updated",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id_photo",
+									"type": "file",
+									"src": "/F:/web/images/1.jpg",
+									"disabled": true
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/F:/web/images/1.png"
+								},
+								{
+									"key": "main_address",
+									"value": "tanta updated",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/update-user-info",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"update-user-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget password (send email verification code)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eslamelbanna02@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/forget-password",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password with verification code (forget)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"E7gLzR\",\r\n    \"new_password\": \"ddddd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/change-password-with-verification",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"change-password-with-verification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lost & found",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "make lost",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "mobile phone2",
+											"type": "text"
+										},
+										{
+											"key": "expected_lost_date",
+											"value": "2021-10-20",
+											"type": "text"
+										},
+										{
+											"key": "expected_lost_place",
+											"value": "tanta2",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "labla",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/web/images/30.jpg"
+										},
+										{
+											"key": "first_color",
+											"value": "red",
+											"type": "text"
+										},
+										{
+											"key": "second_color",
+											"value": "green2",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "samsung4",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "we2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/make-lost",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"make-lost"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one lost",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "AuthToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"lost_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/get-one-lost",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"get-one-lost"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update lost",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "lost_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "mobile phone updated",
+											"type": "text"
+										},
+										{
+											"key": "expected_lost_date",
+											"value": "2021-10-20",
+											"type": "text"
+										},
+										{
+											"key": "expected_lost_place",
+											"value": "tanta updated",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "labla updated",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+										},
+										{
+											"key": "first_color",
+											"value": "red updated",
+											"type": "text"
+										},
+										{
+											"key": "second_color",
+											"value": "green updated",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "samsung updated",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "we updated",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/update-lost",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"update-lost"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete lost",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"lost_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/delete-lost",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"delete-lost"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "make found",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "mobile phone",
+											"type": "text"
+										},
+										{
+											"key": "found_date",
+											"value": "2021-10-10",
+											"type": "text"
+										},
+										{
+											"key": "found_place",
+											"value": "tanta",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "labla",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/a.jpg"
+										},
+										{
+											"key": "first_color",
+											"value": "red",
+											"type": "text"
+										},
+										{
+											"key": "second_color",
+											"value": "green",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "samsung",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "we2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/make-found",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"make-found"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get lostes",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "personal",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/get-lostes",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"get-lostes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all my founds",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-all-my-founds",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-all-my-founds"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one found",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"found_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-one-found",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-one-found"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update found",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "found_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "mobile phone updated",
+											"type": "text"
+										},
+										{
+											"key": "found_date",
+											"value": "2021-10-10",
+											"type": "text"
+										},
+										{
+											"key": "found_place",
+											"value": "tanta updated",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "labla updated",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+										},
+										{
+											"key": "first_color",
+											"value": "red updated",
+											"type": "text"
+										},
+										{
+											"key": "second_color",
+											"value": "green updated",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "samsung updated",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "we updated",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/update-found",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"update-found"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete found",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjMzNzMxMiwibmJmIjoxNjQ2MzM3MzEyLCJqdGkiOiJOUEI2SXRxYnBNRkJiZEswIiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.RX8tciqLSV-m98EXMHexKsT5XfwrnCogCqFIwr5gPyg",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"found_id\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/delete-found",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"delete-found"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get matches for found",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/web/helper/get-matches-for-found",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"web",
+										"helper",
+										"get-matches-for-found"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "create need jop post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjUwNzQ5Nzc3LCJuYmYiOjE2NTA3NDk3NzcsImp0aSI6IlhreXh5QUZIenFsWlVDVGsiLCJzdWIiOjIzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.dEF9guP1NfAHq71GJbID1QML5wVu9F9mR0mrJlKp2Iw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "qualification",
+											"value": "fci 2",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "fast learn2",
+											"type": "text"
+										},
+										{
+											"key": "certificates",
+											"value": "laravel2",
+											"type": "text"
+										},
+										{
+											"key": "summary_about_you",
+											"value": "work under stress2",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/30.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/create-need-jop-post",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"create-need-jop-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "apply to provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/apply-to-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"apply-to-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete need job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/delete-need-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"delete-need-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update need job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "qualification",
+											"value": "medicine",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "good in english",
+											"type": "text"
+										},
+										{
+											"key": "certificates",
+											"value": "tanta university",
+											"type": "text"
+										},
+										{
+											"key": "summary_about_you",
+											"value": "heplful 222",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/Picture2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/update-need-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"update-need-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get provide jobs",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-provide-jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-provide-jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get my need job",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjUwNzQ5Nzc3LCJuYmYiOjE2NTA3NDk3NzcsImp0aSI6IlhreXh5QUZIenFsWlVDVGsiLCJzdWIiOjIzLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.dEF9guP1NfAHq71GJbID1QML5wVu9F9mR0mrJlKp2Iw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/get-my-need-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"get-my-need-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get matches for need job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/get-matches-for-need-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"get-matches-for-need-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all my applying for provide jobs",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"مش بتاعتك يا عبدالله\": \"true\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-all-my-applying-for-provide-jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-all-my-applying-for-provide-jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all accept my applying for provide jobs",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"مش بتاعتك يا عبدالله\": \"true\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-all-accept-my-applying-for-provide-jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-all-accept-my-applying-for-provide-jobs"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "create provide jop post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "required_qualification",
+											"value": "fci",
+											"type": "text"
+										},
+										{
+											"key": "required_skills",
+											"value": "fast learn",
+											"type": "text"
+										},
+										{
+											"key": "required_certificates",
+											"value": "laravel",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/Capture2.PNG"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/create-provide-jop-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"create-provide-jop-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all my provide jobs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/helper/get-all-my-provide-jop-posts",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-all-my-provide-jop-posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get provide jop applyers",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-provide-jop-applyers",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-provide-jop-applyers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "response provide jop applyer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apply_post_id\": 2,\r\n    \"response\": \"no\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/response-provide-jop-applyer",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"response-provide-jop-applyer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/delete-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"delete-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "required_qualification",
+											"value": "medicine",
+											"type": "text"
+										},
+										{
+											"key": "required_skills",
+											"value": "good in english",
+											"type": "text"
+										},
+										{
+											"key": "required_certificates",
+											"value": "tanta university",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/Picture2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/update-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"update-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get need jobs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/helper/get-need-jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-need-jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"job_id\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-one-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-one-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get matches for provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-matches-for-provide-job",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-matches-for-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get acceptance for provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-acceptance-for-provide-job",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-acceptance-for-provide-job"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "things to be done",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "insert thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type_of_service\": \"خدمات\",\r\n    \"from_place\": \"طنطا\",\r\n    \"to_place\": \"القاهرة\",\r\n    \"attach\": \"this is file\",\r\n    \"opposite\": 115,\r\n    \"from_date\": \"2022-12-12\",\r\n    \"to_date\": \"2023-12-12\",\r\n    \"note\": \"nothing\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/insert-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"insert-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all supports to be done",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/needer/get-all-supports-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-all-supports-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "apply to support thing",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/apply-to-support-thing",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"apply-to-support-thing"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all my things to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/get-all-my-things-to-be-done",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"get-all-my-things-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/delete-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"delete-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1,\r\n    \"type_of_service\": \"خدمات2\",\r\n    \"from_place\": \"2طنطا\",\r\n    \"to_place\": \"القاهرة2\",\r\n    \"opposite\": 110,\r\n    \"from_date\": \"2022-12-15\",\r\n    \"to_date\": \"2023-12-15\",\r\n    \"note\": \"nothing2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/update-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"update-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get applyers thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-applyers-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-applyers-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "response to applyer thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"response\": \"no\",\r\n    \"applyer_post_id\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/response-to-applyer-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"response-to-applyer-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get acceptance for thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-acceptance-for-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-acceptance-for-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get matches for thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-matches-for-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-matches-for-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "insert support thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"from_place\": \"طنطا\",\r\n    \"to_place\": \"القاهرة\",\r\n    \"date\": \"2022-04-15\",\r\n    \"note\": \"none\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/insert-support-thing-to-be-done",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"insert-support-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all things to be done",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/helper/get-all-things-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-all-things-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "apply to thing to done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/apply-to-thing-to-done",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"apply-to-thing-to-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get support all my things to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8000/api/helper/get-support-all-my-things-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-support-all-my-things-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete support thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/delete-support-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"delete-support-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get support thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-support-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-support-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update support thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1,\r\n    \"from_place\": \"طنطا\",\r\n    \"to_place\": \"القاهرة\",\r\n    \"date\": \"2022-04-15\",\r\n    \"note\": \"none\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/update-support-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"update-support-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get support applyers thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-support-applyers-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-support-applyers-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "response to applyer support thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"response\": \"yes\",\r\n    \"needer_post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/response-to-applyer-support-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"response-to-applyer-support-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get matches to support to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-matches-to-support-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-matches-to-support-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get acceptance to support to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-acceptance-to-support-to-be-done",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-acceptance-to-support-to-be-done"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "financial help",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "insert need money help",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type_of_help",
+											"value": "مساعدة مالية",
+											"type": "text"
+										},
+										{
+											"key": "specific_address",
+											"value": "شبين الكوم",
+											"type": "text"
+										},
+										{
+											"key": "value",
+											"value": "150",
+											"type": "text"
+										},
+										{
+											"key": "target_help",
+											"value": "for_me",
+											"type": "text"
+										},
+										{
+											"key": "another_user_name",
+											"value": "احمد محمد",
+											"type": "text"
+										},
+										{
+											"key": "provide_help_way",
+											"value": "by_hand",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/insert-need-money-help",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"insert-need-money-help"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get My Need Money Posts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/get-all-my-need-money-posts",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"get-all-my-need-money-posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get One Need Money Post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-one-need-money-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-one-need-money-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update need money post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "post_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "type_of_help",
+											"value": "مساعدة مالية2",
+											"type": "text"
+										},
+										{
+											"key": "specific_address",
+											"value": "شبين الكوم2",
+											"type": "text"
+										},
+										{
+											"key": "value",
+											"value": "170",
+											"type": "text"
+										},
+										{
+											"key": "target_help",
+											"value": "for_another_one",
+											"type": "text"
+										},
+										{
+											"key": "another_user_name",
+											"value": "mohamed",
+											"type": "text"
+										},
+										{
+											"key": "provide_help_way",
+											"value": "online",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/update-need-money-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"update-need-money-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete need money post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/delete-need-money-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"delete-need-money-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get applyers to need money post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\":  1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-applyers-to-need-money-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-applyers-to-need-money-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "accept applyer to need money post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"applyer_request_id\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/accept-applyer-to-need-money-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"accept-applyer-to-need-money-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get accept applyer to help money post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-accept-applyer-to-help-money-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-accept-applyer-to-help-money-post"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "get all financial need",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type_of_help\": \"تبرع بملابس\",\r\n    \"provide_help_way\": \"by_hand\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-all-financial-need",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-all-financial-need"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "provide financial help",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"financial_post_id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/provide-financial-help",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"provide-financial-help"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all my provide financial helps",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-all-my-provide-financial-helps",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-all-my-provide-financial-helps"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete my provide financial help",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"apply_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/delete-my-provide-financial-help",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"delete-my-provide-financial-help"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "posts",
+			"item": [
+				{
+					"name": "insert post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "content",
+									"value": "test post",
+									"type": "text"
+								},
+								{
+									"key": "attach",
+									"type": "file",
+									"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/needer/insert-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"needer",
+								"insert-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all posts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/needer/get-all-posts",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"needer",
+								"get-all-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get only my posts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/needer/get-only-my-posts",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"needer",
+								"get-only-my-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/needer/get-one-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"needer",
+								"get-one-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "post_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "new content ",
+									"type": "text"
+								},
+								{
+									"key": "attach",
+									"type": "file",
+									"src": "/E:/WhatsApp Image 2021-09-25 at 1.33.08 AM.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/needer/update-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"needer",
+								"update-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/needer/delete-post",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"needer",
+								"delete-post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact us",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"555555@gmail.com\",\r\n    \"message\": \"hello admin2222\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://project-graduation.000webhostapp.com/api/contact-us",
+					"protocol": "https",
+					"host": [
+						"project-graduation",
+						"000webhostapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"contact-us"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

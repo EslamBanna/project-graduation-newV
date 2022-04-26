@@ -1,0 +1,917 @@
+{
+	"info": {
+		"_postman_id": "c2601b05-216b-41fc-9c80-dbcbb48d9070",
+		"name": "project grduation local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "عبدالله",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "abdulla@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abdulla123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0147852369",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "2000-01-25",
+									"type": "text"
+								},
+								{
+									"key": "id_number",
+									"value": "3000",
+									"type": "text"
+								},
+								{
+									"key": "job",
+									"value": "software engineer",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "id_photo",
+									"type": "file",
+									"src": "/F:/web/images/1.jpg"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/F:/web/images/1.png"
+								},
+								{
+									"key": "main_address",
+									"value": "tanta",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/sign-up",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"0147852369\",\r\n    \"password\": \"abdulla123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/login",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authToken",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5NTA5MzcwLCJleHAiOjE2Mzk1MTI5NzAsIm5iZiI6MTYzOTUwOTM3MCwianRpIjoiUUUxNFA5VlVvdGNOc3U1bSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.nx09ckmuUqjIWDrvFmsBgEqKzrrjInw2iuH_4vqljjo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/user",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lost & found",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "make lost",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "mobile phone2",
+											"type": "text"
+										},
+										{
+											"key": "expected_lost_date",
+											"value": "2021-10-20",
+											"type": "text"
+										},
+										{
+											"key": "expected_lost_place",
+											"value": "tanta2",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "labla",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/web/images/30.jpg"
+										},
+										{
+											"key": "first_color",
+											"value": "red",
+											"type": "text"
+										},
+										{
+											"key": "second_color",
+											"value": "green2",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "samsung2",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "we2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/make-lost",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"make-lost"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "make found",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "mobile phone",
+											"type": "text"
+										},
+										{
+											"key": "found_date",
+											"value": "2021-10-10",
+											"type": "text"
+										},
+										{
+											"key": "found_place",
+											"value": "tanta",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "labla",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/web/images/30.jpg"
+										},
+										{
+											"key": "first_color",
+											"value": "red",
+											"type": "text"
+										},
+										{
+											"key": "second_color",
+											"value": "green",
+											"type": "text"
+										},
+										{
+											"key": "brand",
+											"value": "samsung",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "we",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/make-found",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"make-found"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get lostes",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "personal",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/get-lostes",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"get-lostes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "create need jop post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "qualification",
+											"value": "fci",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "fast learn",
+											"type": "text"
+										},
+										{
+											"key": "certificates",
+											"value": "laravel",
+											"type": "text"
+										},
+										{
+											"key": "Summary_about_you",
+											"value": "work under stress",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/Capture2.PNG"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/create-need-jop-post",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"create-need-jop-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "apply to provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/apply-to-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"apply-to-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete need job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/delete-need-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"delete-need-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update need job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "qualification",
+											"value": "medicine",
+											"type": "text"
+										},
+										{
+											"key": "skills",
+											"value": "good in english",
+											"type": "text"
+										},
+										{
+											"key": "certificates",
+											"value": "tanta university",
+											"type": "text"
+										},
+										{
+											"key": "Summary_about_you",
+											"value": "heplful",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/Picture2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/update-need-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"update-need-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get provide jobs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/get-provide-jobs",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"get-provide-jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get my need job",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/needer/get-my-need-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"needer",
+										"get-my-need-job"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "create provide jop post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "required_qualification",
+											"value": "fci",
+											"type": "text"
+										},
+										{
+											"key": "required_skills",
+											"value": "fast learn",
+											"type": "text"
+										},
+										{
+											"key": "required_certificates",
+											"value": "laravel",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/Capture2.PNG"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/create-provide-jop-post",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"create-provide-jop-post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all my provide jobs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-all-my-provide-jop-posts",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-all-my-provide-jop-posts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get provide jop applyers",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-provide-jop-applyers",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-provide-jop-applyers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "4",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/delete-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"delete-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "job_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "required_qualification",
+											"value": "medicine",
+											"type": "text"
+										},
+										{
+											"key": "required_skills",
+											"value": "good in english",
+											"type": "text"
+										},
+										{
+											"key": "required_certificates",
+											"value": "tanta university",
+											"type": "text"
+										},
+										{
+											"key": "attach",
+											"type": "file",
+											"src": "/F:/Picture2.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/update-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"update-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get need jobs",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-need-jobs",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-need-jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get one provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"job_id\": 12\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://project-graduation.000webhostapp.com/api/helper/get-one-provide-job",
+									"protocol": "https",
+									"host": [
+										"project-graduation",
+										"000webhostapp",
+										"com"
+									],
+									"path": [
+										"api",
+										"helper",
+										"get-one-provide-job"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

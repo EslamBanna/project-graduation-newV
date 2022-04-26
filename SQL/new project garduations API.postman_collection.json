@@ -1,0 +1,452 @@
+{
+	"info": {
+		"_postman_id": "47f63abe-7b36-4645-a1bc-1165571d77d7",
+		"name": "new project garduations API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "lost & found",
+			"item": [
+				{
+					"name": "needer",
+					"item": []
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "get matches for found",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-matches-for-found",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-matches-for-found"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "get matches for need job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-matches-for-need-job",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-matches-for-need-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all my applying for provide jobs",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"مش بتاعتك يا عبدالله\": \"true\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-all-my-applying-for-provide-jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-all-my-applying-for-provide-jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all accept my applying for provide jobs",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"مش بتاعتك يا عبدالله\": \"true\",\r\n    \"user_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-all-accept-my-applying-for-provide-jobs",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-all-accept-my-applying-for-provide-jobs"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "get matches for provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-matches-for-provide-job",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-matches-for-provide-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get acceptance for provide job",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-acceptance-for-provide-job",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-acceptance-for-provide-job"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "things to be done",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "get acceptance for thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-acceptance-for-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-acceptance-for-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get matches for thing to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5ODM5Mjg0LCJuYmYiOjE2Mzk4MzkyODQsImp0aSI6IklFRm9KeGJ1V2ZGRWZPYzAiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TtiV-csc-nLHEDPf0edibCJzY0-6AnsiWiwxzPJwBeE",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-matches-for-thing-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-matches-for-thing-to-be-done"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": [
+						{
+							"name": "get matches to support to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-matches-to-support-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-matches-to-support-to-be-done"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get acceptance to support to be done",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvcHJvamVjdC1ncmFkdWF0aW9uLjAwMHdlYmhvc3RhcHAuY29tXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjM5Nzc3ODQzLCJuYmYiOjE2Mzk3Nzc4NDMsImp0aSI6IlZnVExjblIyRUZ6TzgzODMiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.7WlGUJdepqz9LfCD9d3P9WD84wtsHx9oemcEEIltoSY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/helper/get-acceptance-to-support-to-be-done",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"helper",
+										"get-acceptance-to-support-to-be-done"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "financial help",
+			"item": [
+				{
+					"name": "needer",
+					"item": [
+						{
+							"name": "get accept applyer to help money post",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authToken",
+										"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0NjUwNzE4MiwibmJmIjoxNjQ2NTA3MTgyLCJqdGkiOiJuM0hKYnlHQm9sWHZDYzU0Iiwic3ViIjoxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TO4i72YepHA-wM2d82pyBQDjwRMP8BqxSuQf6nYqZBc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/api/needer/get-accept-applyer-to-help-money-post",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"needer",
+										"get-accept-applyer-to-help-money-post"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "helper",
+					"item": []
+				}
+			]
+		}
+	]
+}
