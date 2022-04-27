@@ -41,6 +41,8 @@ Route::group(['middleware' => 'CheckAuth:api-user'], function () {
 
     Route::post('/user', [Controller::class, 'me']);
     Route::post('/update-user-info', [Controller::class, 'updateUserInfo']);
+    Route::post('/make-comment',[CommentController::class,'makeComment']);
+    Route::post('/get-comments',[CommentController::class,'getComment']);
 
     Route::post('/get-lostes', [Controller::class, 'getLostess']);
 
@@ -92,8 +94,7 @@ Route::group(['middleware' => 'CheckAuth:api-user'], function () {
         Route::post('/filter-posts',[PostController::class,'filterPosts']);
         Route::post('/filter-my-posts',[PostController::class,'filterMyPosts']);
 
-        Route::post('/make-comment',[CommentController::class,'makeComment']);
-        Route::post('/get-comments',[CommentController::class,'getComment']);
+      
 
     });
 
@@ -146,7 +147,9 @@ Route::group(['prefix' => 'web'], function () {
     Route::post('/get-lostes', [Controller::class, 'getLostess']);
     Route::post('/get-user-info', [Controller::class, 'getUserInfo']);
     Route::post('/update-user-info', [Controller::class, 'updateUserInfo']);
-
+    Route::post('/make-comment',[CommentController::class,'makeComment']);
+    Route::post('/get-comments',[CommentController::class,'getComment']);
+    
     Route::group(['prefix' => 'needer'], function () {
 
         Route::post('/make-lost', [LostController::class, 'makeLost']);
@@ -194,8 +197,6 @@ Route::group(['prefix' => 'web'], function () {
         Route::post('/filter-posts',[PostController::class,'filterPosts']);
         Route::post('/filter-my-posts',[PostController::class,'filterMyPosts']);
 
-        Route::post('/make-comment',[CommentController::class,'makeComment']);
-        Route::post('/get-comments',[CommentController::class,'getComment']);
 
     });
 
