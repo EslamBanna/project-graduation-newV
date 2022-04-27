@@ -1111,7 +1111,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"post_id\": 1\r\n}",
+									"raw": "{\r\n    \"post_id\": 1,\r\n    \"user_id\": 1\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3091,7 +3091,7 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/web/needer/make-comment",
+							"raw": "localhost:8000/api/web/make-comment",
 							"host": [
 								"localhost"
 							],
@@ -3099,7 +3099,6 @@
 							"path": [
 								"api",
 								"web",
-								"needer",
 								"make-comment"
 							]
 						}
@@ -3127,7 +3126,7 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/web/needer/get-comments",
+							"raw": "localhost:8000/api/web/get-comments",
 							"host": [
 								"localhost"
 							],
@@ -3135,7 +3134,6 @@
 							"path": [
 								"api",
 								"web",
-								"needer",
 								"get-comments"
 							]
 						}

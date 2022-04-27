@@ -3150,14 +3150,15 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/needer/make-comment",
+							"raw": "https://project-graduation.000webhostapp.com/api/make-comment",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"project-graduation",
+								"000webhostapp",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
-								"needer",
 								"make-comment"
 							]
 						}
@@ -3185,14 +3186,15 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/needer/get-comments",
+							"raw": "https://project-graduation.000webhostapp.com/api/get-comments",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"project-graduation",
+								"000webhostapp",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
-								"needer",
 								"get-comments"
 							]
 						}
