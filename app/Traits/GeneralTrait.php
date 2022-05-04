@@ -3,6 +3,7 @@
 namespace App\Traits;
 
 use App\Models\Needer\LostObject;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
@@ -22,17 +23,39 @@ trait GeneralTrait
     {
         try {
             $lostes = null;
+            $region = null;
             if ($request->has('personal')) {
                 if ($request->personal == 1) {
-                    $lostes = LostObject::where('needer_id', auth()->user()->id ?? $request->user_id)->latest()->get();
+                    $lostes = LostObject::where('needer_id', auth()->user()->id ?? $request->user_id)
+                        ->latest()
+                        ->get();
                 } else {
-                    $lostes = LostObject::whereDoesntHave('user', function($q) use ($request){
+                    if ($request->has('user_id')) {
+                        $user_data = User::find($request->user_id);
+                        $region = $user_data['region'];
+                    } else {
+                        $region = Auth()->user()->region;
+                    }
+                    $lostes = LostObject::whereDoesntHave('user', function ($q) use ($request) {
                         $q->where('needer_id', Auth()->user()->id ?? $request->user_id);
-                    })->latest()->get();                }
+                    })
+                        // ->where('region', $region)
+                        ->latest()
+                        ->get();
+                }
             } else {
-                $lostes = LostObject::whereDoesntHave('user', function($q) use ($request){
+                if ($request->has('user_id')) {
+                    $user_data = User::find($request->user_id);
+                    $region = $user_data['region'];
+                } else {
+                    $region = Auth()->user()->region;
+                }
+                $lostes = LostObject::whereDoesntHave('user', function ($q) use ($request) {
                     $q->where('needer_id', Auth()->user()->id ?? $request->user_id);
-                })->latest()->get();
+                })
+                    // ->where('region', $region)
+                    ->latest()
+                    ->get();
             }
             return $this->returnData('data', $lostes);
         } catch (\Exception $e) {
