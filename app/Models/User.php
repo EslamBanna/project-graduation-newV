@@ -42,7 +42,8 @@ class User extends  Authenticatable implements JWTSubject
         'id_photo',
         'photo',
         'long',
-        'lat'
+        'lat',
+        'region'
     ];
 
     /**

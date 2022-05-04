@@ -34,6 +34,7 @@ class CreateUsersTable extends Migration
             // $table->string('verfication_code')->nullable();
             $table->string('long')->nullable();
             $table->string('lat')->nullable();
+            $table->string('region')->nullable();
 
             $table->rememberToken();
             // $table->timestamps();
