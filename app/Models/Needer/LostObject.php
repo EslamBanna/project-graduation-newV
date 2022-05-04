@@ -21,7 +21,10 @@ class LostObject extends Model
         'first_color',
         'second_color',
         'brand',
-        'category'
+        'category',
+        'long',
+        'lat',
+        'region'
     ];
 
     public function user()

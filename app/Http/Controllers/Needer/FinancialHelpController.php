@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Needer;
 use App\Http\Controllers\Controller;
 use App\Models\Helper\FinancialApply;
 use App\Models\Needer\FinancialHelp;
+use App\Models\User;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -29,6 +30,15 @@ class FinancialHelpController extends Controller
                 $attach = cloudinary()->upload($request->file('attach')->getRealPath())->getSecurePath();
                 // $attach = $this->saveImage($request->attach, 'financial_help');
             }
+            $long = null;
+            $lat = null;
+            $region = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $long = $user_data['long'];
+                $lat = $user_data['lat'];
+                $region = $user_data['region'];
+            }
             FinancialHelp::create([
                 'needer_id' => Auth()->user()->id ?? $request->user_id,
                 'type_of_help' => $request->type_of_help,
@@ -37,7 +47,10 @@ class FinancialHelpController extends Controller
                 'target_help' => $request->target_help,
                 'another_user_name' => $request->another_user_name,
                 'provide_help_way' => $request->provide_help_way,
-                'attach' => $attach
+                'attach' => $attach,
+                'long' => Auth()->user()->long ?? $long,
+                'lat' => Auth()->user()->long ?? $lat,
+                'region' => Auth()->user()->long ?? $region
             ]);
             return $this->returnSuccessMessage('success');
         } catch (\Exception $e) {
@@ -133,8 +146,8 @@ class FinancialHelpController extends Controller
             $applyers = FinancialApply::with(['helper' => function ($q) {
                 $q->select('id', 'name', 'phone');
             }])
-            ->where('financial_post_id', $request->post_id)
-            ->where('status',0)
+                ->where('financial_post_id', $request->post_id)
+                ->where('status', 0)
                 ->latest()
                 ->get();
             return $this->returnData('data', $applyers);

@@ -27,6 +27,9 @@ class CreateFoundObjectsTable extends Migration
             $table->string('brand')->nullable();
             $table->string('category')->nullable();
             // $table->timestamps();
+            $table->string('long')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('region')->nullable();
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });

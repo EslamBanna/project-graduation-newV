@@ -11,7 +11,20 @@ class ThingsToBeDone extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'type_of_service', 'from_place', 'to_place', 'attach', 'opposite', 'from_date', 'to_date', 'note'];
+    protected $fillable = [
+        'user_id',
+        'type_of_service',
+        'from_place',
+        'to_place',
+        'attach',
+        'opposite',
+        'from_date',
+        'to_date',
+        'note',
+        'long',
+        'lat',
+        'region'
+    ];
 
     // public function getAttachAttribute($value)
     // {
@@ -24,8 +37,9 @@ class ThingsToBeDone extends Model
         return $this->hasMany(ToBeApply::class, 'post_id', 'id')->where('type', 'help');
     }
 
-    public function needer(){
-        return $this->belongsTo(User::class,'user_id', 'id');
+    public function needer()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
     public static function boot()

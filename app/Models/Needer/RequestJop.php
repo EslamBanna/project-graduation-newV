@@ -16,7 +16,10 @@ class RequestJop extends Model
         'skills',
         'certificates',
         'summary_about_you',
-        'attach'
+        'attach',
+        'long',
+        'lat',
+        'region'
     ];
     public function user()
     {

@@ -16,7 +16,10 @@ class SupportThingsToBeDone extends Model
         'from_place',
         'to_place',
         'date',
-        'note'
+        'note',
+        'long',
+        'lat',
+        'region'
     ];
 
     public function helper()

@@ -13,7 +13,10 @@ class Post extends Model
         'user_id',
         'content',
         'post_type',
-        'attach'
+        'attach',
+        'long',
+        'lat',
+        'region'
     ];
     // public function getAttachAttribute($value)
     // {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Helper\FoundObject;
 use App\Models\Needer\LostObject;
+use App\Models\User;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Auth;
@@ -36,6 +37,15 @@ class FoundController extends Controller
                 $attach = cloudinary()->upload($request->file('attach')->getRealPath())->getSecurePath();
             }
             // return $attach;
+            $long = null;
+            $lat = null;
+            $region = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $long = $user_data['long'];
+                $lat = $user_data['lat'];
+                $region = $user_data['region'];
+            }
             FoundObject::create([
                 'helper_id' => auth()->user()->id ?? $request->user_id,
                 'type' => $request->type,
@@ -46,7 +56,10 @@ class FoundController extends Controller
                 'first_color' => $request->first_color,
                 'second_color' => $request->second_color,
                 'brand' => $request->brand,
-                'category' => $request->category
+                'category' => $request->category,
+                'long' => Auth()->user()->long ?? $long,
+                'lat' => Auth()->user()->long ?? $lat,
+                'region' => Auth()->user()->long ?? $region
             ]);
             return $this->returnSuccessMessage('success');
         } catch (\Exception $e) {

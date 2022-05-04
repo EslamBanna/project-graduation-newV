@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Needer\Post;
+use App\Models\User;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 
@@ -17,11 +18,23 @@ class PostController extends Controller
                 $attach = cloudinary()->upload($request->file('attach')->getRealPath())->getSecurePath();
                 // $attach = $this->saveImage($request->attach, 'posts');
             }
+            $long = null;
+            $lat = null;
+            $region = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $long = $user_data['long'];
+                $lat = $user_data['lat'];
+                $region = $user_data['region'];
+            }
             Post::create([
                 'user_id' => Auth()->user()->id ?? $request->user_id,
                 'content' => $request->content,
                 'post_type' => $request->post_type,
-                'attach' => $attach
+                'attach' => $attach,
+                'long' => Auth()->user()->long ?? $long,
+                'lat' => Auth()->user()->long ?? $lat,
+                'region' => Auth()->user()->long ?? $region
             ]);
             return $this->returnSuccessMessage('success');
         } catch (\Exception $e) {

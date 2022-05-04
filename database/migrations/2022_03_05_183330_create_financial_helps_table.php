@@ -24,6 +24,9 @@ class CreateFinancialHelpsTable extends Migration
             $table->enum('provide_help_way',['online','by_hand'])->default('by_hand');
             $table->boolean('status')->comment('0 still not helped 1 helped')->default(0);
             $table->string('attach')->nullable();
+            $table->string('long')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('region')->nullable();
             $table->timestamps();
         });
     }

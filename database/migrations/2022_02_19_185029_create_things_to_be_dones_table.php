@@ -24,6 +24,9 @@ class CreateThingsToBeDonesTable extends Migration
             $table->date('from_date')->nullable();
             $table->date('to_date')->nullable();
             $table->string('note')->nullable();
+            $table->string('long')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('region')->nullable();
             $table->timestamps();
         });
     }

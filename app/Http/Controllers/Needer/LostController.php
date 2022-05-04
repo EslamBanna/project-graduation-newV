@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Needer;
 
 use App\Http\Controllers\Controller;
 use App\Models\Needer\LostObject;
+use App\Models\User;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -33,6 +34,15 @@ class LostController extends Controller
                 $attach = cloudinary()->upload($request->file('attach')->getRealPath())->getSecurePath();
                 // $attach  = $this->saveImage($request->attach, 'lostes');
             }
+            $long = null;
+            $lat = null;
+            $region = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $long = $user_data['long'];
+                $lat = $user_data['lat'];
+                $region = $user_data['region'];
+            }
             LostObject::create([
                 'needer_id' => auth()->user()->id ?? $request->user_id,
                 'type' => $request->type,
@@ -43,7 +53,10 @@ class LostController extends Controller
                 'first_color' => $request->first_color,
                 'second_color' => $request->second_color,
                 'brand' => $request->brand,
-                'category' => $request->category
+                'category' => $request->category,
+                'long' => Auth()->user()->long ?? $long,
+                'lat' => Auth()->user()->long ?? $lat,
+                'region' => Auth()->user()->long ?? $region
             ]);
             return $this->returnSuccessMessage('success');
         } catch (\Exception $e) {

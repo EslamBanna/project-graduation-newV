@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Common\JobApply;
 use App\Models\Helper\ProvideJop;
 use App\Models\Needer\RequestJop;
+use App\Models\User;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 
@@ -20,12 +21,24 @@ class ProvideJobContoller extends Controller
                 $attach = cloudinary()->upload($request->file('attach')->getRealPath())->getSecurePath();
                 // $attach  = $this->saveImage($request->attach, 'provide_job');
             }
+            $long = null;
+            $lat = null;
+            $region = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $long = $user_data['long'];
+                $lat = $user_data['lat'];
+                $region = $user_data['region'];
+            }
             ProvideJop::create([
                 'user_id' => Auth()->user()->id ?? $request->user_id,
                 'required_qualification' => $request->required_qualification,
                 'required_skills' => $request->required_skills,
                 'required_certificates' => $request->required_certificates,
-                'attach' => $attach
+                'attach' => $attach,
+                'long' => Auth()->user()->long ?? $long,
+                'lat' => Auth()->user()->long ?? $lat,
+                'region' => Auth()->user()->long ?? $region
             ]);
             return $this->returnSuccessMessage('success');
         } catch (\Exception $e) {

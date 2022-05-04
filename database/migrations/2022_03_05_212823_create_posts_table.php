@@ -19,6 +19,9 @@ class CreatePostsTable extends Migration
             $table->string('content')->nullable();
             $table->string('post_type')->nullable();
             $table->string('attach')->nullable();
+            $table->string('long')->nullable();
+            $table->string('lat')->nullable();
+            $table->string('region')->nullable();
             $table->timestamps();
         });
     }

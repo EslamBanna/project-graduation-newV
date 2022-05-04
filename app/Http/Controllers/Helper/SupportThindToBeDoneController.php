@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Common\ToBeApply;
 use App\Models\Helper\SupportThingsToBeDone;
 use App\Models\Needer\ThingsToBeDone;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SupportThindToBeDoneController extends Controller
@@ -13,12 +14,24 @@ class SupportThindToBeDoneController extends Controller
     public function insertSupportThingToBeDone(Request $request)
     {
         try {
+            $long = null;
+            $lat = null;
+            $region = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $long = $user_data['long'];
+                $lat = $user_data['lat'];
+                $region = $user_data['region'];
+            }
             SupportThingsToBeDone::create([
                 'user_id' => Auth()->user()->id ?? $request->user_id,
                 'from_place' => $request->from_place,
                 'to_place' => $request->to_place,
                 'date' => $request->date,
-                'note' => $request->note
+                'note' => $request->note,
+                'long' => Auth()->user()->long ?? $long,
+                'lat' => Auth()->user()->long ?? $lat,
+                'region' => Auth()->user()->long ?? $region
             ]);
             return $this->returnSuccessMessage('inserted successfully');
         } catch (\Exception $e) {

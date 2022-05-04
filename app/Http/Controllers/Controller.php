@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use GuzzleHttp\Client;
 
 class Controller extends BaseController
 {
@@ -103,6 +104,26 @@ class Controller extends BaseController
             }
             $user = Auth::guard('api-user')->user();
             $user->token = $token;
+            if ($request->has('longitude') && $request->has('latitude')) {
+                $region = "";
+                $client = new Client();
+                $result = (string) $client->get(
+                    'http://api.positionstack.com/v1/reverse?access_key='
+                        . env('GEO_ADDRES')
+                        . '&query='
+                        . $request->latitude
+                        . ','
+                        . $request->longitude
+                )
+                    ->getBody();
+                $json = json_decode($result, true);
+                $region =  $json['data'][0]['region'];
+                User::find($user['id'])->update([
+                    'long' => $request->longitude,
+                    'lat' => $request->latitude,
+                    'region' => $region,
+                ]);
+            }
             return $this->returnSuccessMessage($user);
         } catch (\Exception $e) {
             return $this->returnError('201', 'fail');
@@ -230,8 +251,9 @@ class Controller extends BaseController
         }
     }
 
-    public function contactUs(Request $request){
-        try{
+    public function contactUs(Request $request)
+    {
+        try {
             $rules = [
                 'email' => 'required|email',
                 'message' => "required|string"

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Common\JobApply;
 use App\Models\Helper\ProvideJop;
 use App\Models\Needer\RequestJop;
+use App\Models\User;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,13 +24,25 @@ class NeedJobContoller extends Controller
                 // $attach  = $this->saveImage($request->attach, 'request_job');
             }
             RequestJop::where('user_id', Auth()->user()->id ?? $request->user_id)->delete();
+            $long = null;
+            $lat = null;
+            $region = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $long = $user_data['long'];
+                $lat = $user_data['lat'];
+                $region = $user_data['region'];
+            }
             RequestJop::create([
                 'user_id' => Auth()->user()->id ?? $request->user_id,
                 'qualification' => $request->qualification,
                 'skills' => $request->skills,
                 'certificates' => $request->certificates,
                 'summary_about_you' => $request->summary_about_you,
-                'attach' => $attach
+                'attach' => $attach,
+                'long' => Auth()->user()->long ?? $long,
+                'lat' => Auth()->user()->long ?? $lat,
+                'region' => Auth()->user()->long ?? $region
             ]);
             DB::commit();
             return $this->returnSuccessMessage('success');

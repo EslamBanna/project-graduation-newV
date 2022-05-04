@@ -19,7 +19,10 @@ class FinancialHelp extends Model
         'another_user_name',
         'provide_help_way',
         'status',
-        'attach'
+        'attach',
+        'long',
+        'lat',
+        'region'
     ];
 
 

@@ -16,7 +16,10 @@ class ProvideJop extends Model
         'required_qualification',
         'required_skills',
         'required_certificates',
-        'attach'
+        'attach',
+        'long',
+        'lat',
+        'region'
     ];
 
     public function user()
