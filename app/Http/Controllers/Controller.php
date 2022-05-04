@@ -269,4 +269,40 @@ class Controller extends BaseController
             return $this->returnError('201', $e->getMessage());
         }
     }
+
+    public function refreshLocation(Request $request)
+    {
+        try {
+            if (!$request->has('longitude') || !$request->has('latitude')) {
+                return $this->returnError('202', 'longitude and latitude both is required');
+            }
+            $region = null;
+            $user_id = 0;
+            if ($request->has('user_id')) {
+                $user_id = $request->user_id;
+            } else {
+                $user_id = Auth()->user()->id;
+            }
+            $client = new Client();
+            $result = (string) $client->get(
+                'http://api.positionstack.com/v1/reverse?access_key='
+                    . env('GEO_ADDRES')
+                    . '&query='
+                    . $request->latitude
+                    . ','
+                    . $request->longitude
+            )
+                ->getBody();
+            $json = json_decode($result, true);
+            $region =  $json['data'][0]['region'];
+            User::find($user_id)->update([
+                'long' => $request->longitude,
+                'lat' => $request->latitude,
+                'region' => $region
+            ]);
+            return $this->returnSuccessMessage('success');
+        } catch (\Exception $e) {
+            return $this->returnError('201', $e->getMessage());
+        }
+    }
 }

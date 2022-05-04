@@ -43,6 +43,7 @@ Route::group(['middleware' => 'CheckAuth:api-user'], function () {
     Route::post('/update-user-info', [Controller::class, 'updateUserInfo']);
     Route::post('/make-comment',[CommentController::class,'makeComment']);
     Route::post('/get-comments',[CommentController::class,'getComment']);
+    Route::post('/refresh-location',[Controller::class,'refreshLocation']);
 
     Route::post('/get-lostes', [Controller::class, 'getLostess']);
 
@@ -149,6 +150,7 @@ Route::group(['prefix' => 'web'], function () {
     Route::post('/update-user-info', [Controller::class, 'updateUserInfo']);
     Route::post('/make-comment',[CommentController::class,'makeComment']);
     Route::post('/get-comments',[CommentController::class,'getComment']);
+    Route::post('/refresh-location',[Controller::class,'refreshLocation']);
     
     Route::group(['prefix' => 'needer'], function () {
 
