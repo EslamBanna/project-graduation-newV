@@ -1489,7 +1489,7 @@
 						{
 							"name": "get need jobs",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"url": {
 									"raw": "https://project-graduation.000webhostapp.com/api/web/helper/get-need-jobs",
@@ -2850,8 +2850,17 @@
 				{
 					"name": "get all posts",
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "https://project-graduation.000webhostapp.com/api/web/needer/get-all-posts",
 							"protocol": "https",
