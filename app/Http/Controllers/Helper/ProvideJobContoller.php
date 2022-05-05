@@ -46,10 +46,18 @@ class ProvideJobContoller extends Controller
         }
     }
 
-    public function getNeedJobs()
+    public function getNeedJobs(Request $request)
     {
         try {
-            $need_jobs = RequestJop::latest()->get();
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $region = $user_data['region'];
+            } else {
+                $region = Auth()->user()->region;
+            }
+            $need_jobs = RequestJop::latest()
+                // ->where('region', $region)
+                ->get();
             return $this->returnData('data', $need_jobs);
         } catch (\Exception $e) {
             return $this->returnError('201', $e->getMessage());

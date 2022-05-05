@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Helper\FinancialApply;
 use App\Models\Needer\FinancialHelp;
+use App\Models\User;
 use App\Traits\GeneralTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -18,24 +19,32 @@ class FinancialProvideController extends Controller
     {
         try {
             $_all_financial_need = null;
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $region = $user_data['region'];
+            } else {
+                $region = Auth()->user()->region;
+            }
             if ($request->has('type_of_help')) {
                 if ($request->has('provide_help_way')) {
                     $_all_financial_need = FinancialHelp::whereDoesntHave('applyers', function ($q) use ($request) {
                         $q->where('helper_id', Auth()->user()->id ?? $request->user_id);
                     })
-                    ->where('status', 0)
+                        ->where('status', 0)
                         ->where('type_of_help', $request->type_of_help)
                         ->where('provide_help_way', $request->provide_help_way)
                         ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
+                        // ->where('region', $region)
                         ->latest()
                         ->get();
                 } else {
                     $_all_financial_need = FinancialHelp::whereDoesntHave('applyers', function ($q) use ($request) {
                         $q->where('helper_id', Auth()->user()->id ?? $request->user_id);
                     })
-                    ->where('status', 0)
+                        ->where('status', 0)
                         ->where('type_of_help', $request->type_of_help)
                         ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
+                        // ->where('region', $region)
                         ->latest()
                         ->get();
                 }
@@ -45,6 +54,7 @@ class FinancialProvideController extends Controller
                 })->where('status', 0)
                     ->where('provide_help_way', $request->provide_help_way)
                     ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
+                    // ->where('region', $region)
                     ->latest()
                     ->get();
             } else {
@@ -52,6 +62,7 @@ class FinancialProvideController extends Controller
                     $q->where('helper_id', Auth()->user()->id ?? $request->user_id);
                 })->where('status', 0)
                     ->where('needer_id', '!=', Auth()->user()->id ?? $request->user_id)
+                    // ->where('region', $region)
                     ->latest()
                     ->get();
             }

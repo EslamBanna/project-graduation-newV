@@ -42,12 +42,19 @@ class PostController extends Controller
         }
     }
 
-    public function getAlltPosts()
+    public function getAlltPosts(Request $request)
     {
         try {
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $region = $user_data['region'];
+            } else {
+                $region = Auth()->user()->region;
+            }
             $posts = Post::with(['user' => function ($q) {
                 $q->select('id', 'name', 'photo');
             }])
+                // ->where('region', $region)
                 ->latest()
                 ->get();
             return $this->returnData('data', $posts);
@@ -158,15 +165,15 @@ class PostController extends Controller
     public function filterMyPosts(Request $request)
     {
         try {
-            if (!$request->has('post_type') || !$request->has('user_id')) {
-                return $this->returnError(202, 'post_type and user_id is required');
+            if (!$request->has('post_type')) {
+                return $this->returnError(202, 'post_type is required');
             }
             if ($request->post_type == 'الكل') {
-                $posts = Post::where('user_id', $request->user_id)
+                $posts = Post::where('user_id', Auth()->user()->id ?? $request->user_id)
                     ->latest()
                     ->get();
             } else {
-                $posts = Post::where('user_id', $request->user_id)
+                $posts = Post::where('user_id', Auth()->user()->id ?? $request->user_id)
                     ->where('post_type', $request->post_type)
                     ->latest()
                     ->get();

@@ -66,9 +66,16 @@ class NeedJobContoller extends Controller
     public function getProvideJobs(Request $request)
     {
         try {
+            if ($request->has('user_id')) {
+                $user_data = User::find($request->user_id);
+                $region = $user_data['region'];
+            } else {
+                $region = Auth()->user()->region;
+            }
             $provide_jobs = ProvideJop::whereDoesntHave('applyers', function ($q) use ($request) {
                 $q->where('user_id', Auth()->user()->id ?? $request->user_id);
             })
+                // ->where('region', $region)
                 ->latest()
                 ->get();
             return $this->returnData('data', $provide_jobs);
@@ -162,7 +169,7 @@ class NeedJobContoller extends Controller
             $provide_jobs = ProvideJop::whereDoesntHave('applyers', function ($q) use ($request) {
                 $q->where('user_id', Auth()->user()->id ?? $request->user_id);
             })
-            ->with('user:id,name,phone,main_address')
+                ->with('user:id,name,phone,main_address')
                 ->where('required_qualification', 'like', '%' . $request_job['qualification'] . '%')
                 ->where('required_skills', 'like', '%' . $request_job['skills'] . '%')
                 ->where('required_certificates', 'like', '%' . $request_job['certificates'] . '%')

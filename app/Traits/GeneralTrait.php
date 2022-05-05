@@ -30,12 +30,12 @@ trait GeneralTrait
                         ->latest()
                         ->get();
                 } else {
-                    if ($request->has('user_id')) {
-                        $user_data = User::find($request->user_id);
-                        $region = $user_data['region'];
-                    } else {
-                        $region = Auth()->user()->region;
-                    }
+                    // if ($request->has('user_id')) {
+                    //     $user_data = User::find($request->user_id);
+                    //     $region = $user_data['region'];
+                    // } else {
+                    //     $region = Auth()->user()->region;
+                    // }
                     $lostes = LostObject::whereDoesntHave('user', function ($q) use ($request) {
                         $q->where('needer_id', Auth()->user()->id ?? $request->user_id);
                     })
@@ -44,12 +44,12 @@ trait GeneralTrait
                         ->get();
                 }
             } else {
-                if ($request->has('user_id')) {
-                    $user_data = User::find($request->user_id);
-                    $region = $user_data['region'];
-                } else {
-                    $region = Auth()->user()->region;
-                }
+                // if ($request->has('user_id')) {
+                //     $user_data = User::find($request->user_id);
+                //     $region = $user_data['region'];
+                // } else {
+                //     $region = Auth()->user()->region;
+                // }
                 $lostes = LostObject::whereDoesntHave('user', function ($q) use ($request) {
                     $q->where('needer_id', Auth()->user()->id ?? $request->user_id);
                 })

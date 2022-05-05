@@ -18,7 +18,7 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "عبدالله",
+									"value": "eslam",
 									"type": "text"
 								},
 								{
@@ -28,7 +28,7 @@
 								},
 								{
 									"key": "password",
-									"value": "abdulla123",
+									"value": "test",
 									"type": "text"
 								},
 								{
@@ -94,7 +94,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"phone\": \"019\",\r\n    \"password\": \"test\"\r\n}",
+							"raw": "{\r\n    \"phone\": \"0147852369\",\r\n    \"password\": \"test\",\r\n    \"longitude\": \"30.992097\",\r\n    \"latitude\": \"30.792871\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -102,13 +102,11 @@
 							}
 						},
 						"url": {
-							"raw": "https://project-graduation.000webhostapp.com/api/login",
-							"protocol": "https",
+							"raw": "localhost:8000/api/login",
 							"host": [
-								"project-graduation",
-								"000webhostapp",
-								"com"
+								"localhost"
 							],
+							"port": "8000",
 							"path": [
 								"api",
 								"login"
@@ -294,6 +292,35 @@
 							"path": [
 								"api",
 								"change-password-with-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"longitude\": \"9.48689\",\r\n    \"latitude\": \"25.31631\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/web/refresh-location",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"web",
+								"refresh-location"
 							]
 						}
 					},
@@ -3065,12 +3092,12 @@
 							"formdata": [
 								{
 									"key": "post_id",
-									"value": "1",
+									"value": "46",
 									"type": "text"
 								},
 								{
 									"key": "post_type",
-									"value": "طلب وظيفة",
+									"value": "post",
 									"type": "text"
 								},
 								{
@@ -3091,11 +3118,13 @@
 							]
 						},
 						"url": {
-							"raw": "localhost:8000/api/web/make-comment",
+							"raw": "https://project-graduation.000webhostapp.com/api/web/make-comment",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"project-graduation",
+								"000webhostapp",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"web",
@@ -3118,7 +3147,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"post_id\": 1,\r\n    \"post_type\": \"طلب وظيفة\"\r\n}",
+							"raw": "{\r\n    \"post_id\": 46,\r\n    \"post_type\": \"post\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3126,11 +3155,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/web/get-comments",
+							"raw": "https://project-graduation.000webhostapp.com/api/web/get-comments",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"project-graduation",
+								"000webhostapp",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"web",

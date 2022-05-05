@@ -94,7 +94,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"phone\": \"015443\",\r\n    \"password\": \"test2\"\r\n}",
+							"raw": "{\r\n    \"phone\": \"01234567809\",\r\n    \"password\": \"@Asdfghjkl123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -102,11 +102,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/api/login",
+							"raw": "https://project-graduation.000webhostapp.com/api/login",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"project-graduation",
+								"000webhostapp",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"login"
@@ -294,6 +296,34 @@
 							"path": [
 								"api",
 								"change-password-with-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh location",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 1,\r\n    \"longitude\": \"9.48689\",\r\n    \"latitude\": \"25.31631\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/refresh-location",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"refresh-location"
 							]
 						}
 					},
@@ -3103,6 +3133,68 @@
 								"api",
 								"needer",
 								"delete-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post_type\": \"عام\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/needer/filter-posts",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"needer",
+								"filter-posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter my posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": 12,\r\n    \"post_type\": \"عام\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://project-graduation.000webhostapp.com/api/needer/filter-my-posts",
+							"protocol": "https",
+							"host": [
+								"project-graduation",
+								"000webhostapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"needer",
+								"filter-my-posts"
 							]
 						}
 					},

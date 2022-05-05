@@ -191,7 +191,7 @@ Route::group(['prefix' => 'web'], function () {
         Route::post('/get-accept-applyer-to-help-money-post', [FinancialHelpController::class, 'getAcceptApplyerToHelpMoneyPost']);
     
         Route::post('/insert-post',[PostController::class,'insertPost']);
-        Route::get('/get-all-posts',[PostController::class,'getAlltPosts']);
+        Route::post('/get-all-posts',[PostController::class,'getAlltPosts']);
         Route::post('/get-only-my-posts',[PostController::class,'getOnlyMytPosts']);
         Route::post('/get-one-post',[PostController::class,'getOnePost']);
         Route::post('/update-post',[PostController::class,'updatePost']);
@@ -212,7 +212,7 @@ Route::group(['prefix' => 'web'], function () {
         Route::post('/get-matches-for-found', [FoundController::class, 'getMatchesForFound']); ## new
         
         Route::post('/create-provide-jop-post', [ProvideJobContoller::class, 'createProvideJopPost']);
-        Route::get('/get-need-jobs', [ProvideJobContoller::class, 'getNeedJobs']);
+        Route::post('/get-need-jobs', [ProvideJobContoller::class, 'getNeedJobs']);
         Route::post('/get-all-my-provide-jop-posts', [ProvideJobContoller::class, 'getAllMyProvideJopPosts']);
         Route::post('/get-provide-jop-applyers', [ProvideJobContoller::class, 'getProvideJopApplyers']);
         Route::post('/response-provide-jop-applyer', [ProvideJobContoller::class, 'responseProvideJopApplyer']);
