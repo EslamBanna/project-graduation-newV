@@ -126,7 +126,7 @@ class Controller extends BaseController
             }
             return $this->returnSuccessMessage($user);
         } catch (\Exception $e) {
-            return $this->returnError('201', 'fail');
+            return $this->returnError('201', $e->getMessage());
         }
     }
 
