@@ -85,6 +85,16 @@ class User extends  Authenticatable implements JWTSubject
     //     return ($value == null ? '' : $actual_link . 'images/users/' . $value);
     // }
 
+    public function getPhotoAttribute($value)
+    {
+        if ($value == null ||  $value == "") {
+            $actual_link = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
+            return $actual_link . 'images/users/index.jpg';
+        } else {
+            return $value;
+        }
+    }
+
     // public function getIdPhotoAttribute($value)
     // {
     //     $actual_link = (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/';
